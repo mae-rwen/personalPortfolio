@@ -1,0 +1,29 @@
+header {
+  //border: $border3;
+  text-align: center;
+  h1 {
+    //border: $border1;
+    font-size: 6em;
+    padding: 0.25em;
+    font-weight: bold;
+    background: -webkit-linear-gradient(140deg, $GF1, $GF0);
+    -webkit-text-fill-color: transparent;
+    background-image: url(https://francinebelle.com/wp-content/uploads/2017/01/starry-night-forest-nature-gif-4.gif);
+    background-size: contain;
+    color: transparent;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+  }
+  p {
+    font-size: 1.25em;
+    line-height: 1.25em;
+  }
+  .iconNext {
+    margin-top: 2em;
+    font-size: 4em;
+    opacity: 60%;
+    &:hover {
+      opacity: 100%;
+    }
+  }
+}

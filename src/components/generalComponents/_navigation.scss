@@ -1,0 +1,13 @@
+.navigation {
+    //    border: $border1; 
+        height: 4em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+        padding: .5em 1.5em;
+        position: sticky;
+        top: 0; 
+        background: $GF2;
+        z-index: 1;         
+    }

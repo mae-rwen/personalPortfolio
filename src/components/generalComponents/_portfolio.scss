@@ -1,0 +1,38 @@
+.main {
+  //    border: $border2;
+  //margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  > * {
+    //border: $border2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8em;
+  }
+  .sectionHeader{
+    margin-bottom: 1em;
+  }
+  .goFurther {
+    padding-top: 1em;
+    font-size: 2em;
+    opacity: 60%;
+    &:hover {
+      opacity: 100%;
+    }
+ 
+  }
+}
+
+.toTop {
+  background: none !important;
+  font-size: 2em;
+  opacity: 60%;
+  color: $GF0;
+  &:hover {
+    opacity: 100%;
+  }
+}

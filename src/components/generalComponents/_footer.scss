@@ -1,0 +1,10 @@
+footer {
+    //    border: $border1; 
+        height: 3em;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;       
+        padding: 1em 1.5em;
+        font-size: small;          
+    }

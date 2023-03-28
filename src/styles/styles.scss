@@ -1,0 +1,40 @@
+// GALACTIC FOREST palette
+// The Milky Way Galaxy is a sight to be seen in our own sky! -->> http://paperheartdesign.com/blog/color-palette-pleasantly-purple
+$GF0: #ffcacb;
+$GF1: #da8a8b;
+$GF2: #4a478a;
+$GF3: #1a2c80;
+$GF4: #282157;
+$GF5: #081448;
+
+$primary: $GF1;
+$dark: $GF5;
+
+$border1: 2px solid $GF1;
+$border2: 2px solid $GF2;
+$border3: 2px solid $GF3;
+$border4: 2px solid $GF4;
+$border5: 2px solid $GF5;
+
+@import "../components/generalComponents/portfolio";
+@import "../components/generalComponents/navigation";
+@import "../components/Header/header";
+@import "../components/AboutMe/aboutMe";
+@import "../components/MyExperience/myExperience";
+@import "../components/MyProjects/myProjects";
+@import "../components/ContactMe/contacMe";
+@import "../components/generalComponents/footer";
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  font-family: sans-serif;
+  color: $GF0;
+  background: rgb(8, 20, 72);
+  background: linear-gradient(
+    148deg,
+    rgba(8, 20, 72, 0.7763480392156863) 3%,
+    rgba(26, 44, 128, 0.742734593837535) 24%,
+    rgba(40, 33, 87, 0.6811099439775911) 65%
+  );
+}

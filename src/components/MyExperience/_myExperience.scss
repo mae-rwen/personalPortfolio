@@ -1,0 +1,13 @@
+.myExperience {
+  //    border: $border2;
+  .stack {
+    width: 100%;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    ul {
+      text-decoration: none;
+      padding: 0;
+    }
+  }
+}
