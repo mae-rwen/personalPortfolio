@@ -35,15 +35,14 @@ export default function Portfolio() {
     <>
       {arrowClicked ? <Navigation /> : null}
       <ScrollToTop smooth className="toTop" component={<FontAwesomeIcon
-          icon={faCircleArrowUp}     
-          
+          icon={faCircleArrowUp}              
         />}/>
       <div className="main">
-        <Header gotoAboutMe={gotoAboutMe} setArrowClicked={setArrowClicked} />
+        <Header gotoAboutMe={gotoAboutMe} setArrowClicked={setArrowClicked} />        
         <AboutMe aboutMe={aboutMe} gotoMyExperience={gotoMyExperience}/>
         <MyExperience myExperience={myExperience} gotoMyProjects={gotoMyProjects}/>
         <MyProjects myProjects={myProjects} gotoContactMe={gotoContactMe}/>
-        <ContactMe contactMe={contactMe}/>
+        <ContactMe contactMe={contactMe}/>         
       </div>
       <Footer />
     </>

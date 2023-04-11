@@ -1,29 +1,78 @@
 header {
-  //border: $border3;
-  text-align: center;
-  h1 {
-    //border: $border1;
-    font-size: 6em;
-    padding: 0.25em;
+  //border: $border1;
+  //text-align: center;
+  // background-image: url('../../assets/images/galaxy.jpg');
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  .tagline {
+    align-self: start;
     font-weight: bold;
-    background: -webkit-linear-gradient(140deg, $GF1, $GF0);
-    -webkit-text-fill-color: transparent;
-    background-image: url(https://francinebelle.com/wp-content/uploads/2017/01/starry-night-forest-nature-gif-4.gif);
-    background-size: contain;
-    color: transparent;
-    -moz-background-clip: text;
-    -webkit-background-clip: text;
+    letter-spacing: 0.15em;
+    padding: 8px 10px;
+    background: linear-gradient(90.21deg, $GF2, $GF1 111.58%);
+    border: 1px solid $GF0;
+    font-size: 1em;
+    margin-bottom: 0.75em;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+      background: linear-gradient(90.21deg, $GF1, $GF2 111.58%);
+    }
   }
-  p {
-    font-size: 1.25em;
-    line-height: 1.25em;
+  .headerMain {
+   // align-self: flex-start;
+    //border: $border1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    //gap: 3em;
+    .headerText {
+      h1 {
+       // border: $border2;
+        //align-self: start;
+        font-size: 5em;
+        padding: 0, 0.5em;
+        font-family: "Centra-Bold", sans-serif;
+        background: linear-gradient(90.21deg, $GF1, $GF2 90.58%);
+        background-size: contain;
+        color: transparent;
+        -moz-background-clip: text;
+        -webkit-background-clip: text;
+        min-width: 10em;
+      }
+      p {
+        //border: $border1;
+        background: linear-gradient(120.21deg, $GF6, $GF7 111.58%);
+        font-size: 1.25em;
+        line-height: 1.5em;
+        padding: 1em;
+        border-radius: 1em;
+        text-shadow: 1px 1px $GF3;
+      }
+    }
+    .headerSide {
+      //border: $border2;
+      img {
+        width: 25em;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          rotate: 15deg;
+        }
+      }
+    }
   }
+  
   .iconNext {
     margin-top: 2em;
     font-size: 4em;
     opacity: 60%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
     &:hover {
       opacity: 100%;
+      transform: scale(1.1);
     }
   }
 }

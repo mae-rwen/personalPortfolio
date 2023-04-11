@@ -10,7 +10,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0 8em;
+  padding: 0 20em;
 }
 .main .sectionHeader {
   margin-bottom: 1em;
@@ -19,9 +19,12 @@
   padding-top: 1em;
   font-size: 2em;
   opacity: 60%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .main .goFurther:hover {
   opacity: 100%;
+  transform: scale(1.1);
 }
 
 .toTop {
@@ -29,9 +32,12 @@
   font-size: 2em;
   opacity: 60%;
   color: #ffcacb;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 .toTop:hover {
   opacity: 100%;
+  transform: scale(1.1);
 }
 
 .navigation {
@@ -48,31 +54,67 @@
 }
 
 header {
-  text-align: center;
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-header h1, header .h1 {
-  font-size: 6em;
-  padding: 0.25em;
+header .tagline {
+  align-self: start;
   font-weight: bold;
-  background: -webkit-linear-gradient(140deg, #da8a8b, #ffcacb);
-  -webkit-text-fill-color: transparent;
-  background-image: url(https://francinebelle.com/wp-content/uploads/2017/01/starry-night-forest-nature-gif-4.gif);
+  letter-spacing: 0.15em;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, #4a478a, #da8a8b 111.58%);
+  border: 1px solid #ffcacb;
+  font-size: 1em;
+  margin-bottom: 0.75em;
+  transition: all 0.3s ease-in-out;
+}
+header .tagline:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90.21deg, #da8a8b, #4a478a 111.58%);
+}
+header .headerMain {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+header .headerMain .headerText h1, header .headerMain .headerText .h1 {
+  font-size: 5em;
+  padding: 0, 0.5em;
+  font-family: "Centra-Bold", sans-serif;
+  background: linear-gradient(90.21deg, #da8a8b, #4a478a 90.58%);
   background-size: contain;
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
+  min-width: 10em;
 }
-header p {
+header .headerMain .headerText p {
+  background: linear-gradient(120.21deg, rgba(218, 138, 139, 0.2862745098), rgba(74, 71, 138, 0.2588235294) 111.58%);
   font-size: 1.25em;
-  line-height: 1.25em;
+  line-height: 1.5em;
+  padding: 1em;
+  border-radius: 1em;
+  text-shadow: 1px 1px #1a2c80;
+}
+header .headerMain .headerSide img {
+  width: 25em;
+  transition: all 0.3s ease-in-out;
+}
+header .headerMain .headerSide img:hover {
+  rotate: 15deg;
 }
 header .iconNext {
   margin-top: 2em;
   font-size: 4em;
   opacity: 60%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 header .iconNext:hover {
   opacity: 100%;
+  transform: scale(1.1);
 }
 
 .aboutMe > * {
@@ -184,12 +226,13 @@ header .iconNext:hover {
 }
 
 footer {
-  height: 3em;
+  min-height: 3em;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  padding: 1em 1.5em;
+  padding-top: 1em;
+  padding-right: 1.5em;
   font-size: small;
 }
 
@@ -5997,8 +6040,7 @@ textarea.form-control-lg {
   float: left;
   width: 100%;
   margin-right: -100%;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
   transition: transform 0.6s ease-in-out;
 }
 @media (prefers-reduced-motion: reduce) {
@@ -11013,8 +11055,23 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+@font-face {
+  font-family: Centra-Bold;
+  src: url("../assets/font/CentraNo2-Bold.ttf");
+  font-weight: 700;
+}
+@font-face {
+  font-family: Centra-Medium;
+  src: url("../assets/font/CentraNo2-Medium.ttf");
+  font-weight: 500;
+}
+@font-face {
+  font-family: Centra-Book;
+  src: url("../assets/font/CentraNo2-Book.ttf");
+  font-weight: 400;
+}
 body {
-  font-family: sans-serif;
+  font-family: "Centra-Book", sans-serif;
   color: #ffcacb;
   background: rgb(8, 20, 72);
   background: linear-gradient(148deg, rgba(8, 20, 72, 0.7763480392) 3%, rgba(26, 44, 128, 0.7427345938) 24%, rgba(40, 33, 87, 0.681109944) 65%);

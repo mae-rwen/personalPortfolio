@@ -7,6 +7,9 @@ $GF3: #1a2c80;
 $GF4: #282157;
 $GF5: #081448;
 
+$GF6: #da8a8b49;
+$GF7: #4a478a42;
+
 $primary: $GF1;
 $dark: $GF5;
 
@@ -27,8 +30,24 @@ $border5: 2px solid $GF5;
 
 @import "~bootstrap/scss/bootstrap";
 
+@font-face {
+	font-family: Centra-Bold;
+	src: url('../assets/font/CentraNo2-Bold.ttf');
+	font-weight: 700;
+}
+@font-face {
+	font-family: Centra-Medium;
+	src: url('../assets/font/CentraNo2-Medium.ttf');
+	font-weight: 500;
+}
+@font-face {
+	font-family: Centra-Book;
+	src: url('../assets/font/CentraNo2-Book.ttf');
+	font-weight: 400;
+}
+
 body {
-  font-family: sans-serif;
+  font-family: 'Centra-Book', sans-serif;
   color: $GF0;
   background: rgb(8, 20, 72);
   background: linear-gradient(
