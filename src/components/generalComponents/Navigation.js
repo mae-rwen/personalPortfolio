@@ -1,15 +1,56 @@
 import { NavLink } from "react-router-dom";
 
-export default function Navigation() {
+export default function Navigation({
+  gotoHome,
+  gotoAboutMe,
+  gotoMyExperience,
+  gotoMyProjects,
+  gotoContactMe,
+}) {
   return (
     <>
-    <div className="navigation">
-      <NavLink to="/">Home</NavLink>
-      <NavLink to="/">About me</NavLink>
-      <NavLink to="/">Skills</NavLink>
-      <NavLink to="/">Projects</NavLink>
-      <NavLink to="/">Contact</NavLink>
-    </div>
+      <div className="navigation">
+        <NavLink
+          to="/"
+          onClick={() => {
+            gotoHome();
+          }}
+        >
+          Home
+        </NavLink>
+        <NavLink
+          to="/"
+          onClick={() => {
+            gotoAboutMe();
+          }}
+        >
+          About me
+        </NavLink>
+        <NavLink
+          to="/"
+          onClick={() => {
+            gotoMyExperience();
+          }}
+        >
+          Skills
+        </NavLink>
+        <NavLink
+          to="/"
+          onClick={() => {
+            gotoMyProjects();
+          }}
+        >
+          Projects
+        </NavLink>
+        <NavLink
+          to="/"
+          onClick={() => {
+            gotoContactMe();
+          }}
+        >
+          Contact
+        </NavLink>
+      </div>
     </>
-  )
+  );
 }

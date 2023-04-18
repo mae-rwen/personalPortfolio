@@ -14,6 +14,13 @@
 }
 .main .sectionHeader {
   margin-bottom: 1em;
+  padding: 0 0.5em;
+  font-family: "Centra-Bold", sans-serif;
+  background: linear-gradient(90.21deg, #ffcacb, #da8a8b 90.58%);
+  background-size: contain;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
 }
 .main .goFurther {
   padding-top: 1em;
@@ -40,6 +47,16 @@
   transform: scale(1.1);
 }
 
+@media only screen and (max-width: 1500px) {
+  .main > * {
+    padding: 0 5em;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .main > * {
+    padding: 0 2em;
+  }
+}
 .navigation {
   height: 4em;
   display: flex;
@@ -49,29 +66,19 @@
   padding: 0.5em 1.5em;
   position: sticky;
   top: 0;
-  background: #4a478a;
+  background: rgba(74, 71, 138, 0.2588235294);
   z-index: 1;
+  gap: 1em;
+}
+.navigation a {
+  text-decoration: none;
 }
 
 header {
   background-position: top center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
-}
-header .tagline {
-  align-self: start;
-  font-weight: bold;
-  letter-spacing: 0.15em;
-  padding: 8px 10px;
-  background: linear-gradient(90.21deg, #4a478a, #da8a8b 111.58%);
-  border: 1px solid #ffcacb;
-  font-size: 1em;
-  margin-bottom: 0.75em;
-  transition: all 0.3s ease-in-out;
-}
-header .tagline:hover {
-  transform: scale(1.1);
-  background: linear-gradient(90.21deg, #da8a8b, #4a478a 111.58%);
+  min-width: 100vw;
 }
 header .headerMain {
   display: flex;
@@ -79,9 +86,25 @@ header .headerMain {
   justify-content: space-between;
   align-items: center;
 }
+header .headerMain .headerText .tagline {
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, #4a478a, #da8a8b 111.58%);
+  border: 1px solid #ffcacb;
+  font-size: 1em;
+  margin-bottom: 1em;
+  transition: all 0.3s ease-in-out;
+}
+header .headerMain .headerText .tagline:hover {
+  transform: scale(1.1);
+  background: linear-gradient(90.21deg, #da8a8b, #4a478a 111.58%);
+}
 header .headerMain .headerText h1, header .headerMain .headerText .h1 {
   font-size: 5em;
-  padding: 0, 0.5em;
+  padding: 0 0.5em;
   font-family: "Centra-Bold", sans-serif;
   background: linear-gradient(90.21deg, #da8a8b, #4a478a 90.58%);
   background-size: contain;
@@ -96,11 +119,12 @@ header .headerMain .headerText p {
   line-height: 1.5em;
   padding: 1em;
   border-radius: 1em;
-  text-shadow: 1px 1px #1a2c80;
+  text-shadow: 1px 1px #da8a8b;
 }
 header .headerMain .headerSide img {
   width: 25em;
   transition: all 0.3s ease-in-out;
+  filter: drop-shadow(15px 10px 30px #da8a8b);
 }
 header .headerMain .headerSide img:hover {
   rotate: 15deg;
@@ -117,17 +141,93 @@ header .iconNext:hover {
   transform: scale(1.1);
 }
 
+@media only screen and (max-width: 1300px) {
+  header .headerMain .headerText h1, header .headerMain .headerText .h1 {
+    font-size: 4.5em;
+  }
+  header .headerMain .headerText p {
+    font-size: 1.25em;
+  }
+  header .headerMain .headerSide img {
+    width: 20em;
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header .headerMain .headerText h1, header .headerMain .headerText .h1 {
+    font-size: 4.15em;
+  }
+  header .headerMain .headerText p {
+    font-size: 1.1em;
+  }
+  header .headerMain .headerSide img {
+    width: 15em;
+  }
+}
+@media only screen and (max-width: 960px) {
+  header .headerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header .headerMain .headerText {
+    order: 2;
+  }
+  header .headerMain .headerSide {
+    order: 1;
+  }
+  header .headerMain .headerSide img {
+    width: 10em;
+  }
+}
+@media only screen and (max-width: 710px) {
+  header .headerMain .headerText .tagline {
+    font-size: 0.75em;
+  }
+  header .headerMain .headerText h1, header .headerMain .headerText .h1 {
+    font-size: 2.5em;
+  }
+  header .headerMain .headerText p {
+    font-size: 1em;
+    max-width: 96vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  header .headerMain .headerText h1, header .headerMain .headerText .h1 {
+    font-size: 2em;
+  }
+}
+@media only screen and (max-width: 350px) {
+  header .headerMain .headerText h1, header .headerMain .headerText .h1 {
+    font-size: 1.5em;
+  }
+}
 .aboutMe > * {
   display: flex;
   flex-direction: row;
-  gap: 2em;
+  gap: 3em;
   justify-content: space-between;
   align-items: center;
 }
 .aboutMe > * img {
-  width: 300px;
+  border-radius: 50%;
+  width: 20em;
+  transition: all 0.3s ease-in-out;
+  filter: drop-shadow(20px 15px 20px #1a2c80);
+}
+.aboutMe > * img:hover {
+  transform: scale(1.1);
+  rotate: -10deg;
 }
 
+@media only screen and (max-width: 850px) {
+  .aboutMe > * {
+    flex-direction: column;
+  }
+  .aboutMe > * img {
+    width: 8em;
+  }
+}
 .myExperience .stack {
   width: 100%;
   display: flex;

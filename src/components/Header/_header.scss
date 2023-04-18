@@ -1,69 +1,61 @@
 header {
-  //border: $border1;
-  //text-align: center;
-  // background-image: url('../../assets/images/galaxy.jpg');
   background-position: top center;
-  background-size: cover;
+  background-size: auto;
   background-repeat: no-repeat;
-  .tagline {
-    align-self: start;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-    padding: 8px 10px;
-    background: linear-gradient(90.21deg, $GF2, $GF1 111.58%);
-    border: 1px solid $GF0;
-    font-size: 1em;
-    margin-bottom: 0.75em;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-      transform: scale(1.1);
-      background: linear-gradient(90.21deg, $GF1, $GF2 111.58%);
-    }
-  }
+  min-width: 100vw;
   .headerMain {
-   // align-self: flex-start;
-    //border: $border1;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    //gap: 3em;
     .headerText {
+      .tagline {
+        width: fit-content;
+        font-weight: bold;
+        letter-spacing: 0.15em;
+        padding: 8px 10px;
+        background: linear-gradient(90.21deg, $GF2, $GF1 111.58%);
+        border: 1px solid $GF0;
+        font-size: 1em;
+        margin-bottom: 1em;
+        transition: all 0.3s ease-in-out;
+        &:hover {
+          transform: scale(1.1);
+          background: linear-gradient(90.21deg, $GF1, $GF2 111.58%);
+        }
+      }
       h1 {
-       // border: $border2;
-        //align-self: start;
         font-size: 5em;
-        padding: 0, 0.5em;
+        padding: 0 0.5em;
         font-family: "Centra-Bold", sans-serif;
         background: linear-gradient(90.21deg, $GF1, $GF2 90.58%);
         background-size: contain;
         color: transparent;
         -moz-background-clip: text;
         -webkit-background-clip: text;
-        min-width: 10em;
+        min-width: 10em;        
       }
       p {
-        //border: $border1;
         background: linear-gradient(120.21deg, $GF6, $GF7 111.58%);
         font-size: 1.25em;
         line-height: 1.5em;
         padding: 1em;
         border-radius: 1em;
-        text-shadow: 1px 1px $GF3;
+        text-shadow: 1px 1px $GF1;
       }
     }
     .headerSide {
-      //border: $border2;
       img {
         width: 25em;
         transition: all 0.3s ease-in-out;
+        filter: drop-shadow(15px 10px 30px $GF1);
         &:hover {
           rotate: 15deg;
         }
       }
     }
   }
-  
+
   .iconNext {
     margin-top: 2em;
     font-size: 4em;
@@ -73,6 +65,104 @@ header {
     &:hover {
       opacity: 100%;
       transform: scale(1.1);
+    }
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  header {
+    .headerMain {
+      .headerText {
+        h1 {
+          font-size: 4.5em;
+        }
+        p {
+          font-size: 1.25em;
+        }
+      }
+      .headerSide {
+        img {
+          width: 20em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1100px) {
+  header {
+    .headerMain {
+      .headerText {
+        h1 {
+          font-size: 4.15em;
+        }
+        p {
+          font-size: 1.1em;
+        }
+      }
+      .headerSide {
+        img {
+          width: 15em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 960px) {
+  header {
+    .headerMain {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      .headerText {
+        order: 2;
+      }
+      .headerSide {
+        order: 1;
+        img {
+          width: 10em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 710px) {
+  header {
+    .headerMain {
+      .headerText {
+        .tagline {
+          font-size: 0.75em;
+        }
+        h1 {
+          font-size: 2.5em;
+        }
+        p {
+          font-size: 1em;
+          max-width: 96vw;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 400px) {
+  header {
+    .headerMain {
+      .headerText {
+        h1 {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 350px) {
+  header {
+    .headerMain {
+      .headerText {
+        h1 {
+          font-size: 1.5em;
+        }
+      }
     }
   }
 }

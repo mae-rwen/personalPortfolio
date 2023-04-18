@@ -6,7 +6,7 @@ import bgImage from "../../assets/images/galaxy.jpg";
 import React, { useState, useEffect } from "react";
 import kawka from '../../assets/images/kawka_logo.png';
 
-export default function Header({ gotoAboutMe, setArrowClicked }) {
+export default function Header({ home, gotoAboutMe }) {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState("");
@@ -19,7 +19,6 @@ export default function Header({ gotoAboutMe, setArrowClicked }) {
     let ticker = setInterval(() => {
       tick();
     }, delta);
-
     return () => {
       clearInterval(ticker);
     };
@@ -31,13 +30,10 @@ export default function Header({ gotoAboutMe, setArrowClicked }) {
     let updatedText = isDeleting
       ? fullText.substring(0, text.length - 1)
       : fullText.substring(0, text.length + 1);
-
     setText(updatedText);
-
     if (isDeleting) {
       setDelta((prevDelta) => prevDelta / 2);
     }
-
     if (!isDeleting && updatedText === fullText) {
       setIsDeleting(true);
       setIndex((prevIndex) => prevIndex - 1);
@@ -54,10 +50,10 @@ export default function Header({ gotoAboutMe, setArrowClicked }) {
 
   return (
     <>
-      <header style={{ backgroundImage: `url(${bgImage})` }}>
-        <div className="tagline">Welcome to my Portfolio</div>
+      <header style={{ backgroundImage: `url(${bgImage})` }} ref={home}>        
         <div className="headerMain">
-          <div className="headerText">            
+          <div className="headerText">   
+          <div className="tagline">Welcome to my Portfolio</div>         
               <h1>Hi! I'm Agata<br /> -{text}</h1>          
             <p>
             Passionate entry-level developer on the rise. Always learning, constantly creating, and committed to delivering exceptional user experiences. Let's bring the digital vision to life with a fresh perspective and a hunger for innovation.
@@ -68,9 +64,8 @@ export default function Header({ gotoAboutMe, setArrowClicked }) {
         <FontAwesomeIcon
           icon={faCircleArrowDown}
           className="iconNext"
-          onClick={() => {
-            gotoAboutMe();
-            setArrowClicked(true);
+          onClick={() => {          
+            gotoAboutMe();         
           }}
         />      
       </header>

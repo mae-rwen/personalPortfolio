@@ -8,6 +8,10 @@
         padding: .5em 1.5em;
         position: sticky;
         top: 0; 
-        background: $GF2;
-        z-index: 1;         
+        background: $GF7;
+        z-index: 1; 
+        gap: 1em;
+       a {
+        text-decoration: none;
+       }        
     }
