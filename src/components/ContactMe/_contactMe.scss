@@ -5,22 +5,21 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    gap: .75em;
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
     .contactOption {
       display: flex;
-      flex-direction: column;
-      border-radius: 1em;
-      background: $GF2;
+      flex-direction: column;      
       width: 250px;
       min-height: 150px;
       justify-content: center;
       align-items: center;
       gap: 0.5em;
       padding: 1em;
-      text-align: center;
-      &:hover {
-        border: 1px solid $GF1;
-        background: none;
-      }
+      text-align: center;      
       .contactIcon {
         font-size: 2.5em;
       }
