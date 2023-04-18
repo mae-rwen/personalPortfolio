@@ -9,6 +9,7 @@ $GF5: #081448;
 
 $GF6: #da8a8b49;
 $GF7: #4a478a42;
+$GF8: #ffcacb87;
 
 $primary: $GF1;
 $dark: $GF5;
@@ -25,7 +26,7 @@ $border5: 2px solid $GF5;
 @import "../components/AboutMe/aboutMe";
 @import "../components/MyExperience/myExperience";
 @import "../components/MyProjects/myProjects";
-@import "../components/ContactMe/contacMe";
+@import "../components/ContactMe/contactMe";
 @import "../components/generalComponents/footer";
 
 @import "~bootstrap/scss/bootstrap";

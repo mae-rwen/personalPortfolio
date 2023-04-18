@@ -1,13 +1,29 @@
 .myExperience {
   //    border: $border2;
   .stack {
-    width: 100%;    
+    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-flow: row wrap;
     justify-content: space-evenly;
-    ul {
-      text-decoration: none;
-      padding: 0;
+    gap: 2em;
+    div {
+      display: flex;
+      flex-direction: column;
+  
+    
+      padding: 2em;
+      width: 300px;
+      gap: 0.5em;
+     
+      h4 {
+        align-self: center;
+        font-family: "Centra-Medium";
+      }
+      ul {
+        list-style: none;
+        padding: 0;
+        line-height: 2em;
+      }
     }
   }
 }

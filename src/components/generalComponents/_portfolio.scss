@@ -1,11 +1,8 @@
 .main {
-  //    border: $border2;
-  //margin: 2em auto;
   display: flex;
   flex-direction: column;
   gap: 2em;
   > * {
-    //border: $border2;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -22,6 +19,16 @@
     color: transparent;
     -moz-background-clip: text;
     -webkit-background-clip: text;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      cursor: pointer;
+      background: linear-gradient(90.21deg, $GF1, $GF0 90.58%);
+      background-size: contain;
+      color: transparent;
+      -moz-background-clip: text;
+      -webkit-background-clip: text;
+      transform: scale(1.1);
+    }
   }
   .goFurther {
     padding-top: 1em;
@@ -46,6 +53,19 @@
   &:hover {
     opacity: 100%;
     transform: scale(1.1);
+  }
+}
+
+.cardStyle {
+  border-radius: 1em;
+  background: $GF2;
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(15px 10px 10px $GF8);
+  &:hover {
+    cursor: pointer;
+    background: $GF8;
+    color: $GF2;
+    filter: drop-shadow(15px 10px 10px $GF2);
   }
 }
 

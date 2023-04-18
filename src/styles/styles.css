@@ -21,6 +21,16 @@
   color: transparent;
   -moz-background-clip: text;
   -webkit-background-clip: text;
+  transition: all 0.3s ease-in-out;
+}
+.main .sectionHeader:hover {
+  cursor: pointer;
+  background: linear-gradient(90.21deg, #da8a8b, #ffcacb 90.58%);
+  background-size: contain;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.1);
 }
 .main .goFurther {
   padding-top: 1em;
@@ -45,6 +55,19 @@
 .toTop:hover {
   opacity: 100%;
   transform: scale(1.1);
+}
+
+.cardStyle {
+  border-radius: 1em;
+  background: #4a478a;
+  transition: all 0.5s ease-in-out;
+  filter: drop-shadow(15px 10px 10px rgba(255, 202, 203, 0.5294117647));
+}
+.cardStyle:hover {
+  cursor: pointer;
+  background: rgba(255, 202, 203, 0.5294117647);
+  color: #4a478a;
+  filter: drop-shadow(15px 10px 10px #4a478a);
 }
 
 @media only screen and (max-width: 1500px) {
@@ -76,9 +99,8 @@
 
 header {
   background-position: top center;
-  background-size: auto;
+  background-size: cover;
   background-repeat: no-repeat;
-  min-width: 100vw;
 }
 header .headerMain {
   display: flex;
@@ -231,12 +253,25 @@ header .iconNext:hover {
 .myExperience .stack {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-evenly;
+  gap: 2em;
 }
-.myExperience .stack ul {
-  text-decoration: none;
+.myExperience .stack div {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+  width: 300px;
+  gap: 0.5em;
+}
+.myExperience .stack div h4, .myExperience .stack div .h4 {
+  align-self: center;
+  font-family: "Centra-Medium";
+}
+.myExperience .stack div ul {
+  list-style: none;
   padding: 0;
+  line-height: 2em;
 }
 
 .myProjects .projects {
@@ -298,7 +333,7 @@ header .iconNext:hover {
 .contactMe .contact .contactOption {
   display: flex;
   flex-direction: column;
-  border-radius: 10%;
+  border-radius: 1em;
   background: #4a478a;
   width: 250px;
   min-height: 150px;
