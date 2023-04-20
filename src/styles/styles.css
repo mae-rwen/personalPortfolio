@@ -274,6 +274,49 @@ header .iconNext:hover {
   line-height: 2em;
 }
 
+.myProjects .projectsCarousel {
+  width: 100%;
+}
+.myProjects .projectsCarousel img {
+  aspect-ratio: 1;
+  width: 100%;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.myProjects .projectsCarousel .carouselCaption {
+  background: rgba(218, 138, 139, 0.2862745098);
+  border-radius: 1em;
+  color: #4a478a;
+  padding: 2em;
+}
+.myProjects .projectsCarousel .carouselCaption h4, .myProjects .projectsCarousel .carouselCaption .h4 {
+  font-family: "Centra-Bold", sans-serif;
+  background: linear-gradient(90.21deg, #4a478a, #da8a8b 90.58%);
+  background-size: contain;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.3s ease-in-out;
+}
+.myProjects .projectsCarousel .carouselCaption h4:hover, .myProjects .projectsCarousel .carouselCaption .h4:hover {
+  cursor: pointer;
+  background: linear-gradient(90.21deg, #da8a8b, #4a478a 90.58%);
+  background-size: contain;
+  color: transparent;
+  -moz-background-clip: text;
+  -webkit-background-clip: text;
+  transform: scale(1.1);
+}
+.myProjects .projectsCarousel .carouselCaption ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.myProjects .projectsCarousel .carouselCaption ul li {
+  font-style: italic;
+}
 .myProjects .projects {
   width: 100%;
   display: flex;

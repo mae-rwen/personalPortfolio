@@ -1,165 +1,70 @@
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Carousel from "react-bootstrap/Carousel";
 
 export default function MyProjects({ myProjects, gotoContactMe }) {
+  const projects = [
+    {
+      title: "GitHub Repository",
+      thumbnail:
+        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      description: `All of my bigger and smaller projects, that may not have been deployed yet`,
+      hyperlink: `https://github.com/mae-rwen`,
+    },
+    {
+      title: "Vibely",
+      thumbnail:
+        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      description: `Fullstack application for connecting people with same interests, alowing them to create events and invite other people to join, like playing board games together or joining a concert in town.`,
+      stack: ["React JS", "Boostrap", "Node.js", "Express.js", "MongoDB"],
+      hyperlink: ``,
+    },
+    {
+      title: "Poké Fight",
+      thumbnail:
+        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      description: `Small fullstack application for browsing Pokémons and saving outputs of their fights.`,
+      stack: ["React JS", "Node.js", "MongoDB"],
+      hyperlink: `https://vibely.onrender.com/`,
+    },
+    {
+      title: "Tarot Portrait",
+      thumbnail:
+        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      description: `Small frontend calculator-like application for creating personalised tarot psychological portraits`,
+      stack: ["React JS", "Bootstrap", "Vanilla JavaScript"],
+      hyperlink: `http://tarot.maerwen.pl/`,
+    },
+  ];
+
   return (
     <>
       <div className="myProjects" ref={myProjects}>
         <h2 className="sectionHeader">My Projects</h2>
-        <div className="projects">
-          <div className="thumbnail">
-            <img
-              src="https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg"
-              alt="project thumbnail"
-            />
-            <div className="thumbnailBody">
-              <h4>Project 1</h4>
-              <p>
-                Do velit pariatur qui incididunt minim. Ut tempor non magna amet
-                cillum. Elit anim cillum ex amet culpa ullamco. Velit elit id
-                dolore nulla elit sint deserunt ex incididunt est minim
-                occaecat. In dolor id sint veniam cillum sunt duis pariatur.
-                Nulla occaecat fugiat excepteur tempor pariatur mollit velit
-                consectetur cupidatat.
-              </p>
-              <ul>
-                <li>JS</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JS</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-          <div className="thumbnail">
-            <img
-              src="https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg"
-              alt="project thumbnail"
-            />
-            <div className="thumbnailBody">
-              <h4>Project 2</h4>
-              <p>
-                Do velit pariatur qui incididunt minim. Ut tempor non magna amet
-                cillum. Elit anim cillum ex amet culpa ullamco. Velit elit id
-                dolore nulla elit sint deserunt ex incididunt est minim
-                occaecat. In dolor id sint veniam cillum sunt duis pariatur.
-                Nulla occaecat fugiat excepteur tempor pariatur mollit velit
-                consectetur cupidatat.
-              </p>
-              <ul>
-                <li>JS</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-          <div className="thumbnail">
-            <img
-              src="https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg"
-              alt="project thumbnail"
-            />
-            <div className="thumbnailBody">
-              <h4>Project 3</h4>
-              <p>
-                Do velit pariatur qui incididunt minim. Ut tempor non magna amet
-                cillum. Elit anim cillum ex amet culpa ullamco. Velit elit id
-                dolore nulla elit sint deserunt ex incididunt est minim
-                occaecat. In dolor id sint veniam cillum sunt duis pariatur.
-                Nulla occaecat fugiat excepteur tempor pariatur mollit velit
-                consectetur cupidatat.
-              </p>
-              <ul>
-                <li>JS</li>
-                <li>React</li>
-                <li>React</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-          <div className="thumbnail">
-            <img
-              src="https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg"
-              alt="project thumbnail"
-            />
-            <div className="thumbnailBody">
-              <h4>Project 4</h4>
-              <p>
-                Do velit pariatur qui incididunt minim. Ut tempor non magna amet
-                cillum. Elit anim cillum ex amet culpa ullamco. Velit elit id
-                dolore nulla elit sint deserunt ex incididunt est minim
-                occaecat. In dolor id sint veniam cillum sunt duis pariatur.
-                Nulla occaecat fugiat excepteur tempor pariatur mollit velit
-                consectetur cupidatat.
-              </p>
-              <ul>
-                <li>JS</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-          <div className="thumbnail">
-            <img
-              src="https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg"
-              alt="project thumbnail"
-            />
-            <div className="thumbnailBody">
-              <h4>Project 3</h4>
-              <p>
-                Do velit pariatur qui incididunt minim. Ut tempor non magna amet
-                cillum. Elit anim cillum ex amet culpa ullamco. Velit elit id
-                dolore nulla elit sint deserunt ex incididunt est minim
-                occaecat. In dolor id sint veniam cillum sunt duis pariatur.
-                Nulla occaecat fugiat excepteur tempor pariatur mollit velit
-                consectetur cupidatat.
-              </p>
-              <ul>
-                <li>JS</li>
-                <li>React</li>
-                <li>React</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-          <div className="thumbnail">
-            <img
-              src="https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg"
-              alt="project thumbnail"
-            />
-            <div className="thumbnailBody">
-              <h4>Project 5</h4>
-              <p>
-                Do velit pariatur qui incididunt minim. Ut tempor non magna amet
-                cillum. Elit anim cillum ex amet culpa ullamco. Velit elit id
-                dolore nulla elit sint deserunt ex incididunt est minim
-                occaecat. In dolor id sint veniam cillum sunt duis pariatur.
-                Nulla occaecat fugiat excepteur tempor pariatur mollit velit
-                consectetur cupidatat.
-              </p>
-              <ul>
-                <li>JS</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>CSS</li>
-                <li>Bootstrap</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+        <Carousel className="projectsCarousel">
+          {projects.map((project) => {
+            return (
+              <Carousel.Item >
+                <img                                
+                  src={project.thumbnail}
+                  alt="project thumbnail"
+                />
+                <Carousel.Caption className="carouselCaption">
+                  <h4>{project.title}</h4>
+                  <p>{project.description}</p>
+                  {project.stack ? (
+                    <ul>                     
+                      {project.stack.map((value) => {
+                        return <li>{value}</li>;
+                      })}
+                    </ul>
+                  ) : null}
+                </Carousel.Caption>
+              </Carousel.Item>
+            );
+          })}
+        </Carousel>       
         <FontAwesomeIcon
           icon={faCircleArrowDown}
           className="goFurther"
