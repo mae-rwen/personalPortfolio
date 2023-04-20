@@ -1,6 +1,7 @@
 import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Carousel from "react-bootstrap/Carousel";
+import { Link } from "react-router-dom";
 
 export default function MyProjects({ myProjects, gotoContactMe }) {
   const projects = [
@@ -17,7 +18,7 @@ export default function MyProjects({ myProjects, gotoContactMe }) {
         "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
       description: `Fullstack application for connecting people with same interests, alowing them to create events and invite other people to join, like playing board games together or joining a concert in town.`,
       stack: ["React JS", "Boostrap", "Node.js", "Express.js", "MongoDB"],
-      hyperlink: ``,
+      hyperlink: `https://vibely.onrender.com/`,
     },
     {
       title: "Poké Fight",
@@ -25,7 +26,7 @@ export default function MyProjects({ myProjects, gotoContactMe }) {
         "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
       description: `Small fullstack application for browsing Pokémons and saving outputs of their fights.`,
       stack: ["React JS", "Node.js", "MongoDB"],
-      hyperlink: `https://vibely.onrender.com/`,
+      hyperlink: `#`,
     },
     {
       title: "Tarot Portrait",
@@ -44,14 +45,15 @@ export default function MyProjects({ myProjects, gotoContactMe }) {
 
         <Carousel className="projectsCarousel">
           {projects.map((project) => {
-            return (
+            return (             
               <Carousel.Item >
                 <img                                
                   src={project.thumbnail}
                   alt="project thumbnail"
                 />
+                 
                 <Carousel.Caption className="carouselCaption">
-                  <h4>{project.title}</h4>
+                <Link to={project.hyperlink} target="_blank"><h4>{project.title}</h4> </Link>
                   <p>{project.description}</p>
                   {project.stack ? (
                     <ul>                     
@@ -61,6 +63,7 @@ export default function MyProjects({ myProjects, gotoContactMe }) {
                     </ul>
                   ) : null}
                 </Carousel.Caption>
+               
               </Carousel.Item>
             );
           })}

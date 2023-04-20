@@ -285,12 +285,15 @@ header .iconNext:hover {
      object-fit: cover;
 }
 .myProjects .projectsCarousel .carouselCaption {
-  background: rgba(218, 138, 139, 0.2862745098);
+  background: rgba(255, 202, 203, 0.5294117647);
   border-radius: 1em;
-  color: #4a478a;
+  color: #081448;
   padding: 2em;
 }
-.myProjects .projectsCarousel .carouselCaption h4, .myProjects .projectsCarousel .carouselCaption .h4 {
+.myProjects .projectsCarousel .carouselCaption a {
+  text-decoration: none;
+}
+.myProjects .projectsCarousel .carouselCaption a h4, .myProjects .projectsCarousel .carouselCaption a .h4 {
   font-family: "Centra-Bold", sans-serif;
   background: linear-gradient(90.21deg, #4a478a, #da8a8b 90.58%);
   background-size: contain;
@@ -299,7 +302,7 @@ header .iconNext:hover {
   -webkit-background-clip: text;
   transition: all 0.3s ease-in-out;
 }
-.myProjects .projectsCarousel .carouselCaption h4:hover, .myProjects .projectsCarousel .carouselCaption .h4:hover {
+.myProjects .projectsCarousel .carouselCaption a h4:hover, .myProjects .projectsCarousel .carouselCaption a .h4:hover {
   cursor: pointer;
   background: linear-gradient(90.21deg, #da8a8b, #4a478a 90.58%);
   background-size: contain;
@@ -311,62 +314,20 @@ header .iconNext:hover {
 .myProjects .projectsCarousel .carouselCaption ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: space-evenly;
+  padding: 0;
 }
 .myProjects .projectsCarousel .carouselCaption ul li {
   font-style: italic;
 }
-.myProjects .projects {
-  width: 100%;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-evenly;
-  gap: 2em;
-}
-.myProjects .projects .thumbnail {
-  border: 1px solid #282157;
-  border-radius: 5%;
-  width: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.myProjects .projects .thumbnail img {
-  width: 100%;
-  max-height: 200px;
-  aspect-ratio: 1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  border-top-left-radius: 5%;
-  border-top-right-radius: 5%;
-}
-.myProjects .projects .thumbnail .thumbnailBody {
-  padding: 1em;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  justify-content: center;
-}
-.myProjects .projects .thumbnail .thumbnailBody h4, .myProjects .projects .thumbnail .thumbnailBody .h4 {
-  padding: 0;
-  margin: 0;
-}
-.myProjects .projects .thumbnail .thumbnailBody p {
-  padding: 0;
-  margin: 0;
-}
-.myProjects .projects .thumbnail .thumbnailBody ul {
-  text-decoration: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  -moz-column-gap: 0.5em;
-       column-gap: 0.5em;
-}
 
+@media only screen and (max-width: 450px) {
+  .myProjects .projectsCarousel .carouselCaption {
+    font-size: 0.75em;
+    padding: 0.25em;
+  }
+}
 .contactMe .contact {
   width: 100%;
   display: flex;

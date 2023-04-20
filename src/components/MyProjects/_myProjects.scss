@@ -5,90 +5,56 @@
     img {
       aspect-ratio: 1;
       width: 100%;
-      height: 350px;      
+      height: 350px;
       object-fit: cover;
     }
     .carouselCaption {
       // border: $border3;
-      background: $GF6;
+      background: $GF8;
       border-radius: 1em;
-      color: $GF2;
+      color: $GF5;
       padding: 2em;
-      h4 {        
-        font-family: "Centra-Bold", sans-serif;
-        background: linear-gradient(90.21deg, $GF2, $GF1 90.58%);
-        background-size: contain;
-        color: transparent;
-        -moz-background-clip: text;
-        -webkit-background-clip: text;
-        transition: all 0.3s ease-in-out;
-        &:hover {
-          cursor: pointer;
-          background: linear-gradient(90.21deg, $GF1, $GF2 90.58%);
+      a {
+        text-decoration: none;
+        h4 {
+          font-family: "Centra-Bold", sans-serif;
+          background: linear-gradient(90.21deg, $GF2, $GF1 90.58%);
           background-size: contain;
           color: transparent;
           -moz-background-clip: text;
           -webkit-background-clip: text;
-          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            cursor: pointer;
+            background: linear-gradient(90.21deg, $GF1, $GF2 90.58%);
+            background-size: contain;
+            color: transparent;
+            -moz-background-clip: text;
+            -webkit-background-clip: text;
+            transform: scale(1.1);
+          }
         }
       }
       ul {
         list-style: none;
         display: flex;
-        flex-direction: row;
+        flex-flow: row wrap;
         justify-content: space-evenly;
+        padding: 0;
         li {
-         font-style: italic;
+          font-style: italic;
         }
       }
     }
-    
   }
-  .projects {
-    width: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-    gap: 2em;
-    .thumbnail {
-      border: 1px solid $GF4;
-      border-radius: 5%;
-      width: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      //gap: 1em;
-      img {
-        width: 100%;
-        max-height: 200px;
-        aspect-ratio: 1;
-        object-fit: cover;
-        border-top-left-radius: 5%;
-        border-top-right-radius: 5%;
-      }
-      .thumbnailBody {
-        padding: 1em;
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        justify-content: center;
-        h4 {
-          padding: 0;
-          margin: 0;
-        }
-        p {
-          padding: 0;
-          margin: 0;
-        }
-        ul {
-          text-decoration: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-flow: row wrap;
-          justify-content: flex-start;
-          column-gap: 0.5em;
-        }
+}
+
+@media only screen and (max-width: 450px) {
+  .myProjects {
+    .projectsCarousel {
+      .carouselCaption {
+        font-size: 0.75em;
+        padding: 0.25em;
       }
     }
   }
