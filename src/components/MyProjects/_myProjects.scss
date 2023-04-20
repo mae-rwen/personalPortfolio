@@ -3,6 +3,7 @@
   .projectsCarousel {
     width: 100%;
     img {
+      border-radius: 1em;
       aspect-ratio: 1;
       width: 100%;
       height: 350px;
@@ -49,7 +50,7 @@
   }
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 700px) {
   .myProjects {
     .projectsCarousel {
       .carouselCaption {

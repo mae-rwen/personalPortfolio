@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export default function MyProjects({ myProjects, gotoContactMe }) {
   const projects = [
     {
-      title: "GitHub Repository",
+      title: "GitHub Profile",
       thumbnail:
         "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
       description: `All of my bigger and smaller projects, that may not have been deployed yet`,
