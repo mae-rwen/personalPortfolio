@@ -6,20 +6,20 @@
       border-radius: 1em;
       aspect-ratio: 1;
       width: 100%;
-      height: 350px;
+      height: 450px;
       object-fit: cover;
     }
     .carouselCaption {
       // border: $border3;
-      background: $GF8;
+      background: $GF2;
       border-radius: 1em;
-      color: $GF5;
+      color: $GF1;
       padding: 2em;
       a {
         text-decoration: none;
         h4 {
           font-family: "Centra-Bold", sans-serif;
-          background: linear-gradient(90.21deg, $GF2, $GF1 90.58%);
+          background: linear-gradient(90.21deg, $GF0, $GF1 90.58%);
           background-size: contain;
           color: transparent;
           -moz-background-clip: text;
@@ -27,7 +27,7 @@
           transition: all 0.3s ease-in-out;
           &:hover {
             cursor: pointer;
-            background: linear-gradient(90.21deg, $GF1, $GF2 90.58%);
+            background: linear-gradient(90.21deg, $GF1, $GF0 90.58%);
             background-size: contain;
             color: transparent;
             -moz-background-clip: text;
@@ -55,7 +55,7 @@
     .projectsCarousel {
       .carouselCaption {
         font-size: 0.75em;
-        padding: 0.25em;
+        padding: 0.5em;
       }
     }
   }

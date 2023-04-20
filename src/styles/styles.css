@@ -281,14 +281,14 @@ header .iconNext:hover {
   border-radius: 1em;
   aspect-ratio: 1;
   width: 100%;
-  height: 350px;
+  height: 450px;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .myProjects .projectsCarousel .carouselCaption {
-  background: rgba(255, 202, 203, 0.5294117647);
+  background: #4a478a;
   border-radius: 1em;
-  color: #081448;
+  color: #da8a8b;
   padding: 2em;
 }
 .myProjects .projectsCarousel .carouselCaption a {
@@ -296,7 +296,7 @@ header .iconNext:hover {
 }
 .myProjects .projectsCarousel .carouselCaption a h4, .myProjects .projectsCarousel .carouselCaption a .h4 {
   font-family: "Centra-Bold", sans-serif;
-  background: linear-gradient(90.21deg, #4a478a, #da8a8b 90.58%);
+  background: linear-gradient(90.21deg, #ffcacb, #da8a8b 90.58%);
   background-size: contain;
   color: transparent;
   -moz-background-clip: text;
@@ -305,7 +305,7 @@ header .iconNext:hover {
 }
 .myProjects .projectsCarousel .carouselCaption a h4:hover, .myProjects .projectsCarousel .carouselCaption a .h4:hover {
   cursor: pointer;
-  background: linear-gradient(90.21deg, #da8a8b, #4a478a 90.58%);
+  background: linear-gradient(90.21deg, #da8a8b, #ffcacb 90.58%);
   background-size: contain;
   color: transparent;
   -moz-background-clip: text;
@@ -326,7 +326,7 @@ header .iconNext:hover {
 @media only screen and (max-width: 700px) {
   .myProjects .projectsCarousel .carouselCaption {
     font-size: 0.75em;
-    padding: 0.25em;
+    padding: 0.5em;
   }
 }
 .contactMe .contact {

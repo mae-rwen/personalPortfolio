@@ -2,36 +2,36 @@ import { faCircleArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Carousel from "react-bootstrap/Carousel";
 import { Link } from "react-router-dom";
+import vibely from "../../assets/images/projects/vibely.PNG"
+import tpp from "../../assets/images/projects/tpp.PNG"
+import github from "../../assets/images/projects/github.PNG"
 
 export default function MyProjects({ myProjects, gotoContactMe }) {
   const projects = [
     {
       title: "GitHub Profile",
-      thumbnail:
-        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      thumbnail: github,
       description: `All of my bigger and smaller projects, that may not have been deployed yet`,
       hyperlink: `https://github.com/mae-rwen`,
     },
     {
       title: "Vibely",
-      thumbnail:
-        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      thumbnail: vibely,       
       description: `Fullstack application for connecting people with same interests, alowing them to create events and invite other people to join, like playing board games together or joining a concert in town.`,
       stack: ["React JS", "Boostrap", "Node.js", "Express.js", "MongoDB"],
       hyperlink: `https://vibely.onrender.com/`,
     },
-    {
-      title: "Poké Fight",
-      thumbnail:
-        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
-      description: `Small fullstack application for browsing Pokémons and saving outputs of their fights.`,
-      stack: ["React JS", "Node.js", "MongoDB"],
-      hyperlink: `#`,
-    },
+    // {
+    //   title: "Poké Fight",
+    //   thumbnail:
+    //     "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+    //   description: `Small fullstack application for browsing Pokémons and saving outputs of their fights.`,
+    //   stack: ["React JS", "Node.js", "MongoDB"],
+    //   hyperlink: `#`,
+    // },
     {
       title: "Tarot Portrait",
-      thumbnail:
-        "https://img.freepik.com/premium-vector/cute-cat-face_536312-7.jpg",
+      thumbnail: tpp,
       description: `Small frontend calculator-like application for creating personalised tarot psychological portraits`,
       stack: ["React JS", "Bootstrap", "Vanilla JavaScript"],
       hyperlink: `http://tarot.maerwen.pl/`,
